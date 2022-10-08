@@ -14,6 +14,9 @@ async function getuserinfo(request){
 }
 
 app.get('*', (req, res) => {
+  res.setHeader("Content-Type", "text/html");
+  res.writeHead(200);
+  res.end(`<html><body><h1>This is HTML</h1></body></html>`);
   /*
   const value = Promise.resolve(getuserinfo(req.originalUrl.substring(1))).then(result =>{
     if(result){

@@ -14,7 +14,7 @@ async function getuserinfo(request){
 }
 
 app.get('*', (req, res) => {
-  
+  /*
   const value = Promise.resolve(getuserinfo(req.originalUrl.substring(1))).then(result =>{
     if(result){
       var dir = `./${req.originalUrl.substring(1)}`;
@@ -44,7 +44,8 @@ app.get('*', (req, res) => {
       }
   }catch(err){
     res.sendFile("If you are expecting a website refresh the page.")
-  }   
+  }   */
+  res.sendFile(path.resolve() + `/error.html`)
 })
 
 
